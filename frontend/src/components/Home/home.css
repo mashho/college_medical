@@ -13,6 +13,7 @@
 .home-left-page{
     flex: 0.25;
     padding: 2px;
+    margin-top: 20px;
 }
 .home-right-page{
     flex: 0.75;
@@ -63,4 +64,19 @@
     margin-top: 10px;
     padding: 15px;
     border-radius: 5px;
+    height: 400px;
+    overflow-y: auto;
+}
+@media screen and (max-width:760px) {
+    .home-block{
+        flex-direction: column;
+    }
+    .home{
+        padding: 40px 20px;
+    }
+    .home-right-page{
+        padding: 10px;
+
+    }
+
 }

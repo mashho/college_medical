@@ -7,7 +7,8 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-const CustomTable = () => {
+
+const CustomTable = ({ headers, data }) => {
     const StyledTableCell = styled(TableCell)(({ theme }) => ({
         [`&.${tableCellClasses.head}`]: {
             backgroundColor: "#255674",
@@ -32,51 +33,41 @@ const CustomTable = () => {
             <Table sx={{ minWidth: 700 }} aria-label="customized table">
                 <TableHead>
                     <TableRow>
-                        <StyledTableCell>Name</StyledTableCell>
-                        <StyledTableCell align="right">Designation</StyledTableCell>
-                        <StyledTableCell align="right">Email id</StyledTableCell>
-                        <StyledTableCell align="right">Contact No.</StyledTableCell>
+                        {
+                            headers.map((item, index) => {
+                                return (
+                                    <StyledTableCell key={index}>{item}</StyledTableCell>
+                                );
+                            })
+                        }
                     </TableRow>
                 </TableHead>
                 <TableBody>
+                    {
+                        data.map((item, index) => {
+                            return (
+                                <StyledTableRow key={index}>
+                                    {
+                                        Object.keys(item).map((key,ind)=>{
+                                            return (
+                                                <StyledTableCell >{item[key]}</StyledTableCell>
+                                            );
+                                        })
+                                    }
 
-                    <StyledTableRow key={"row.name"}>
-                        <StyledTableCell component="th" scope="row">
-                            {"ABC Kumar "}
-                        </StyledTableCell>
-                        <StyledTableCell align="right">{"HOD Health issue"}</StyledTableCell>
-                        <StyledTableCell align="right">{"hod@nitUk@gmail.com"}</StyledTableCell>
-                        <StyledTableCell align="right">{"+917296954180"}</StyledTableCell>
-                    </StyledTableRow>
+                                </StyledTableRow>
+                                
+                                // <StyledTableRow key={index}>
 
+                                //     <StyledTableCell >{item.name}</StyledTableCell>
+                                //     <StyledTableCell >{"HOD Health issue"}</StyledTableCell>
+                                //     <StyledTableCell >{"hod@nitUk@gmail.com"}</StyledTableCell>
+                                //     <StyledTableCell >{"+917296954180"}</StyledTableCell>
+                                // </StyledTableRow>
 
-                    <StyledTableRow key={"row.name"}>
-                        <StyledTableCell component="th" scope="row">
-                            {"ABC Kumar "}
-                        </StyledTableCell>
-                        <StyledTableCell align="right">{"HOD Health issue"}</StyledTableCell>
-                        <StyledTableCell align="right">{"hod@nitUk@gmail.com"}</StyledTableCell>
-                        <StyledTableCell align="right">{"+917296954180"}</StyledTableCell>
-                    </StyledTableRow>
-
-
-                    <StyledTableRow key={"row.name"}>
-                        <StyledTableCell component="th" scope="row">
-                            {"ABC Kumar "}
-                        </StyledTableCell>
-                        <StyledTableCell align="right">{"HOD Health issue"}</StyledTableCell>
-                        <StyledTableCell align="right">{"hod@nitUk@gmail.com"}</StyledTableCell>
-                        <StyledTableCell align="right">{"+917296954180"}</StyledTableCell>
-                    </StyledTableRow>
-
-                    <StyledTableRow key={"row.name"}>
-                        <StyledTableCell component="th" scope="row">
-                            {"ABC Kumar "}
-                        </StyledTableCell>
-                        <StyledTableCell align="right">{"HOD Health issue"}</StyledTableCell>
-                        <StyledTableCell align="right">{"hod@nitUk@gmail.com"}</StyledTableCell>
-                        <StyledTableCell align="right">{"+917296954180"}</StyledTableCell>
-                    </StyledTableRow>
+                            );
+                        })
+                    }
 
                 </TableBody>
             </Table>

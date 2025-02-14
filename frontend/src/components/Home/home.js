@@ -8,6 +8,9 @@ import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
 import GlobalLoader from '../GlobalLoader/globalLoader';
 import About from '../About/about';
 import Staff from '../Staff/staff';
+import Facility from '../Facilities/facility';
+import NearByHospitals from '../NearByHospitals/nearByHospitals';
+import Gallary from '../Gallary/gallary';
 const Home = () => {
     let [page, setPage] = useState("About");
     let [rightSideHeader,setRightSideHeader] = useState("About Us");
@@ -36,9 +39,15 @@ const Home = () => {
     const getComponent = ()=>{
         switch(page){
             case "About":
-                return <About />
+                return <About />;
             case "Staff":
-                return <Staff/>
+                return <Staff />;
+            case "Facilities":
+                return <Facility />;
+            case "NearByHospitals":
+                return <NearByHospitals />;
+            default:
+                return <Gallary />
         }
     }
     return (
