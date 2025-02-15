@@ -13,7 +13,7 @@ const Footer = () => {
             <div className='footer-text-white'>Uttrakhand</div>
             <div className='footer-text-smaller'>Srinagar, Pauri (Garhwal)-246174</div>
             <div className='footer-text-smaller'><LocalPhoneIcon /> 1346-257400</div>
-            <div className='footer-text-smaller'><LanguageIcon />www.nituk.ac.in</div>
+            <div className='footer-text-smaller'><LanguageIcon /> www.nituk.ac.in</div>
             <p className='footer-text-smaller'>Copyright © 2024 National Institute of Technology, Uttarakhand.</p>
         </div>
         <div className='foooter-center'>

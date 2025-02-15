@@ -69,10 +69,16 @@
     text-decoration: none;
     user-select: none;
     padding: 20px;
+    color: white;
+    border-radius: 5px;
     &:hover{
         background-color: #2c98dc;
     }
 
+}
+
+.active-navLink{
+    background-color: #2c98dc;
 }
 
 .navbar-link-opt{
@@ -113,7 +119,7 @@
     height: 100%;
     width: 100%;
 }
-@media screen and (max-width:760px) {
+@media screen and (max-width:768px) {
     .header-college-details{
         flex-direction: column;
     }

@@ -44,7 +44,7 @@
     margin-bottom: 10px;
 }
 .important-link{
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 500;
     margin-bottom: 40px;
 }
@@ -65,7 +65,7 @@
     margin-top: 5px;
 }
 
-@media screen and (max-width:760px) {
+@media screen and (max-width:768px) {
     .footer{
         flex-direction: column;
         

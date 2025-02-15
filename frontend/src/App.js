@@ -1,13 +1,19 @@
 import './App.css';
 import Footer from './components/footer';
 import Header from './components/header';
-import Home from './components/Home/home';
-
+import Home from './pages/Home/home';
+import {Route,Routes,Redirect} from 'react-router-dom'
+import Login from './pages/Login/login';
+import Stock from './pages/Stock/stock';
 function App() {
   return (
     <div className="App">
       <Header />
-      <Home />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/stock' element={<Stock />} />
+      </Routes>
       <Footer />
     </div>
   );

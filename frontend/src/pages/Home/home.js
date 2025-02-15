@@ -5,12 +5,12 @@ import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
 import GroupsIcon from '@mui/icons-material/Groups';
 import MmsIcon from '@mui/icons-material/Mms';
 import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
-import GlobalLoader from '../GlobalLoader/globalLoader';
-import About from '../About/about';
-import Staff from '../Staff/staff';
-import Facility from '../Facilities/facility';
-import NearByHospitals from '../NearByHospitals/nearByHospitals';
-import Gallary from '../Gallary/gallary';
+import GlobalLoader from '../../components/GlobalLoader/globalLoader';
+import About from '../../components/About/about';
+import Staff from '../../components/Staff/staff';
+import Facility from '../../components/Facilities/facility';
+import NearByHospitals from '../../components/NearByHospitals/nearByHospitals';
+import Gallary from '../../components/Gallary/gallary';
 const Home = () => {
     let [page, setPage] = useState("About");
     let [rightSideHeader,setRightSideHeader] = useState("About Us");
