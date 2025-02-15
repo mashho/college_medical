@@ -9,6 +9,7 @@
 .gallary-home-image-block{
     width: 300px;
     height: 250px;
+    cursor: pointer;
 }
 
 .gallary-home-image{

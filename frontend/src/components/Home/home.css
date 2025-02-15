@@ -7,8 +7,9 @@
 .home-block{
     display: flex;
     padding: 3px;
-    border: 3px solid #255674;
     gap: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    
 }
 .home-left-page{
     flex: 0.25;
@@ -30,7 +31,7 @@
     margin-bottom: 5px;
     align-items: center;
     color: black;
-    border: 2px solid #255674;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 
     &:hover{
         background-color: #255674;
@@ -46,6 +47,7 @@
     padding: 20px;
     margin: 5px 10px 10px 10px;
     border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 .home-right-header{
     width: 100%;
@@ -67,6 +69,19 @@
     height: 400px;
     overflow-y: auto;
 }
+.home-right-section::-webkit-scrollbar {
+    width: 8px; /* Set the scrollbar width */
+    height: 8px; /* Set the scrollbar height (for horizontal scrolling) */
+  }
+  
+  .home-right-section::-webkit-scrollbar-thumb {
+    background-color: #255674; /* Color of the scrollbar handle */
+    border-radius: 4px; /* Rounded corners */
+  }
+  
+  .home-right-section::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Color of the scrollbar track */
+  }
 @media screen and (max-width:760px) {
     .home-block{
         flex-direction: column;
@@ -77,6 +92,9 @@
     .home-right-page{
         padding: 10px;
 
+    }
+    .home-right-section{
+        height: auto;
     }
 
 }

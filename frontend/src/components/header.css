@@ -68,6 +68,10 @@
     cursor: pointer;
     text-decoration: none;
     user-select: none;
+    padding: 20px;
+    &:hover{
+        background-color: #2c98dc;
+    }
 
 }
 
