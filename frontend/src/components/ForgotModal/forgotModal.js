@@ -16,7 +16,7 @@ const ForgotModal = (props) => {
                     <input className='form-input' type='text' placeholder='New Password' />
 
                 </div>
-                <div className='form-btn forgot-password-btn'>Register</div>
+                <div className='form-btn forgot-password-btn'>Reset Password</div>
                 <div className='form-btn forgot-password-btn' onClick={handleCloseModal}>Cancel</div>
             </div>
         </div>
