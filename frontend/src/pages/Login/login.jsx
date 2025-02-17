@@ -1,11 +1,20 @@
 import React, { useState } from 'react'
 import './login.css'
 import ForgotModal from '../../components/ForgotModal/forgotModal';
+import { useNavigate } from 'react-router-dom';
 const Login = () => {
   const [forgotPassword,setForgotPassword] = useState(false);
-
+  const navigate= useNavigate()
   const closeForgotPassword =()=>{
     setForgotPassword(prev=>!prev)
+  }
+
+  const handleLogin=async(role="admin")=>{
+    if(role==="admin"){
+      navigate('/admin/dashboard');
+    }else{
+      alert("This page is not yet designed")
+    }
   }
   return (
     <div className='login-page'>
@@ -16,7 +25,7 @@ const Login = () => {
         <div className='form-input-fields'>
           <input className='form-input' type='email' placeholder='Enter Email Id' />
           <input className='form-input' type='password' placeholder='Your Password' />
-          <div className='form-btn'>Login</div>
+          <div className='form-btn' onClick={()=>handleLogin("admin")}>Login</div>
         </div>
         <div className='forgot-password-link' onClick={closeForgotPassword}>Forgot Password ?</div>
       </div>
