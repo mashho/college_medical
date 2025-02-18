@@ -25,9 +25,7 @@ const AddMedicine = (props) => {
                             <div className='register-input-box'>
                                 <input type='text' className='input-box-register' placeholder='Usage' />
                             </div>
-                            <div className='register-input-box'>
-                                <input type='text' className='input-box-register' placeholder='Price' />
-                            </div>
+                            
                             
                         </div>
                         <button type='submit' className='form-btn reg-btn'>Add</button>
