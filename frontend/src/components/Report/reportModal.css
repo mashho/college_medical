@@ -109,6 +109,8 @@
 .edit-icon{
     color: #255674;
     cursor: pointer;
+    display: flex;
+    align-items: center;
     &:hover{
         color: rgb(227, 227, 11);
     }
