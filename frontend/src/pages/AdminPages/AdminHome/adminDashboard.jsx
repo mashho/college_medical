@@ -1,5 +1,6 @@
 import React from 'react';
 import './adminDashboard.css';
+import { Link } from 'react-router-dom';
 const AdminDashboard = () => {
   return (
     <div className='adminDashboard'>
@@ -8,14 +9,14 @@ const AdminDashboard = () => {
           <div className='manage-staff-btn'>Manage Staffs</div>
         </div>
         <div className='admin-dashboard-cards'>
-          <div className='admin-dashboard-card'>
+          <Link to={'/admin/register-student'} className='admin-dashboard-card'>
             Register Student
-          </div>
+          </Link>
           <div className='admin-dashboard-card'>
             Manage Medicines
           </div>
           <div className='admin-dashboard-card'>
-            card
+            Records
           </div>
         </div>
     </div>

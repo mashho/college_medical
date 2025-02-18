@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './stock.css'
-import SearchIcon from '@mui/icons-material/Search';
 import CustomTable from '../../components/Table/table';
+import SearchBox from '../../components/SearchBox/searchBox';
 const Stock = () => {
+  const [medicineName,setMedicineName] = useState("");
   const headers=["Sr No.","Name","Quantity","Usage"];
   const medicineData = [
     { srNo: 1, name: "Paracetamol", quantity: 50, purpose: "Fever and Pain Relief" },
@@ -14,12 +15,13 @@ const Stock = () => {
     { srNo: 7, name: "Insulin", quantity: 15, purpose: "Diabetes Management" },
     { srNo: 8, name: "Multivitamins", quantity: 200, purpose: "Nutritional Supplement" },
   ];
+
+  const handleOnChangeInputField = (value)=>{
+    setMedicineName(value);
+  }
   return (
     <div className='stock-page'>
-      <div className='stock-page-searchBox'>
-        <input type='text' className='input-box' placeholder='Search Medicine' />
-        <div className='search-btn'><SearchIcon /></div>
-      </div>
+      <SearchBox placeholder={"Search Medicine"} value={medicineName} onChangeHandle={handleOnChangeInputField}  />
       <div className='stock-page-card'> 
         <CustomTable headers={headers} data={medicineData}  />
       </div>
