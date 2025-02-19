@@ -16,6 +16,10 @@ const Login = () => {
       alert("This page is not yet designed")
     }
   }
+
+  const handleRegister =async()=>{
+    navigate("/student/123")
+  }
   return (
     <div className='login-page'>
 
@@ -42,7 +46,7 @@ const Login = () => {
           <input className='form-input' type='text' placeholder='Your Roll No' />
 
 
-          <div className='form-btn'>Register</div>
+          <div className='form-btn' onClick={handleRegister}>Register</div>
         </div>
       </div>
       {

@@ -12,6 +12,7 @@ import Record from './pages/AdminPages/Records/record';
 import AdminFacilitiy from './pages/AdminPages/Facilities/adminFacilitiy';
 import NearByHospitalsManage from './pages/AdminPages/NearByHospitals/nearByHospitalsManage';
 import GallaryAdmin from './pages/AdminPages/Gallary/gallaryAdmin';
+import StudentDashboard from './pages/StudentPages/StudentDashboard/studentDashboard';
 function App() {
   return (
     <div className="App">
@@ -20,6 +21,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/login' element={<Login />} />
         <Route path='/stock' element={<Stock />} />
+
         <Route path='/admin/dashboard' element={<AdminDashboard />} />
         <Route path='/admin/register-student' element={<RegisterStudent />} />
         <Route path='/admin/manage-medicine' element={<ManageMedicine />} />
@@ -27,6 +29,9 @@ function App() {
         <Route path='/admin/faciltity' element={<AdminFacilitiy />} />
         <Route path='/admin/hospitals' element={<NearByHospitalsManage />} />
         <Route path='/admin/gallary' element={<GallaryAdmin />} />
+
+        <Route path='/student/:id' element={<StudentDashboard />} />
+
 
       </Routes>
       <Footer />
