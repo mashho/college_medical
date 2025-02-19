@@ -59,7 +59,7 @@ const ManageStaffModal = (props) => {
                         <div>Mr. Sanjay Kumar Rao </div>
                         <div className='list-staff-btns'>
                             <div className='edit-icon'><EditIcon/></div>
-                            <div className='delete-icon'><DeleteIcon/></div>
+                            <div className='delete-icon '><DeleteIcon/></div>
                         </div>
                     </div>
                     

@@ -8,6 +8,10 @@ import Stock from './pages/Stock/stock';
 import AdminDashboard from './pages/AdminPages/AdminHome/adminDashboard';
 import RegisterStudent from './pages/AdminPages/RegisterStudent/registerStudent';
 import ManageMedicine from './pages/AdminPages/ManageMedicine/manageMedicine';
+import Record from './pages/AdminPages/Records/record';
+import AdminFacilitiy from './pages/AdminPages/Facilities/adminFacilitiy';
+import NearByHospitalsManage from './pages/AdminPages/NearByHospitals/nearByHospitalsManage';
+import GallaryAdmin from './pages/AdminPages/Gallary/gallaryAdmin';
 function App() {
   return (
     <div className="App">
@@ -19,6 +23,11 @@ function App() {
         <Route path='/admin/dashboard' element={<AdminDashboard />} />
         <Route path='/admin/register-student' element={<RegisterStudent />} />
         <Route path='/admin/manage-medicine' element={<ManageMedicine />} />
+        <Route path='/admin/records' element={<Record />} />
+        <Route path='/admin/faciltity' element={<AdminFacilitiy />} />
+        <Route path='/admin/hospitals' element={<NearByHospitalsManage />} />
+        <Route path='/admin/gallary' element={<GallaryAdmin />} />
+
       </Routes>
       <Footer />
     </div>

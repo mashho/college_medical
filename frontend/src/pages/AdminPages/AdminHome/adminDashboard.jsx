@@ -20,9 +20,18 @@ const AdminDashboard = () => {
           <Link to={'/admin/manage-medicine'} className='admin-dashboard-card'>
             Manage Medicines
           </Link>
-          <div className='admin-dashboard-card'>
+          <Link to={"/admin/records"} className='admin-dashboard-card'>
             Records
-          </div>
+          </Link>
+          <Link to={"/admin/faciltity"} className='admin-dashboard-card'>
+            Facilities
+          </Link>
+          <Link to={"/admin/hospitals"} className='admin-dashboard-card'>
+            Near By Hospitals
+          </Link>
+          <Link to={"/admin/gallary"} className='admin-dashboard-card'>
+            Gallary
+          </Link>
         </div>
         {manageModal && <ManageStaffModal openCloseModal={openCloseModal} />}
     </div>
