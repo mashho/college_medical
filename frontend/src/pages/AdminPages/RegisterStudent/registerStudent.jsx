@@ -45,6 +45,15 @@ const RegisterStudent = () => {
                         <div className='register-input-box'>
                             <input type='text' className='input-box-register' placeholder='Address' />
                         </div>
+                        <div className='register-input-box'>
+                            <input type='text' className='input-box-register' placeholder='Previous Health Issues' />
+                        </div>
+                        <div className='register-input-box'>
+                            <input type='number' className='input-box-register' placeholder='Age' />
+                        </div>
+                        <div className='register-input-box'>
+                            <input type='text' className='input-box-register' placeholder='Blood Group' />
+                        </div>
                     </div>
                     <button type='submit' className='form-btn reg-btn'>Register</button>
 
